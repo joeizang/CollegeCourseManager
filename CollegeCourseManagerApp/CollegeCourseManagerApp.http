@@ -1,0 +1,11 @@
+@CollegeCourseManagerApp_HostAddress = http://localhost:5027
+
+GET {{CollegeCourseManagerApp_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{CollegeCourseManagerApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

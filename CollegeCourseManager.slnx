@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CollegeCourseManager.Domain/CollegeCourseManager.Domain.csproj" />
+  <Project Path="CollegeCourseManager.Persistence/CollegeCourseManager.Persistence.csproj" />
+  <Project Path="CollegeCourseManagerApp/CollegeCourseManagerApp.csproj" />
+</Solution>
