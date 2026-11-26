@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CollegeCourseManager.Domain.ResultTypes;
 
 namespace CollegeCourseManager.Domain.DomainModels
 {
@@ -21,8 +22,12 @@ namespace CollegeCourseManager.Domain.DomainModels
             Prerequisites = [];
         }
 
-        public static ProgrammeCurriculum Create(Programme programme)
+        public static Result<ProgrammeCurriculum, DomainError> Create(Programme programme)
         {
+            if (programme is null)
+                return new DomainError(
+                    "To create a valid curriculum, you cannot pass an invalid programme",
+                    -1);
             var curriculum = new ProgrammeCurriculum
             {
                 StudyProgram = programme

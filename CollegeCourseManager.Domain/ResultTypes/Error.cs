@@ -5,6 +5,5 @@ using System.Threading.Tasks;
 
 namespace CollegeCourseManager.Domain.ResultTypes;
 
-public class Error(string ErrorMessage, int ErrorCode = -1, bool ErrorRaised = false){}
+public sealed record Error<E>(E ErrorPayload);
 
-public class ArgumentError(string Message) : Error(Message){}
